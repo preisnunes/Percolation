@@ -13,7 +13,7 @@ class Site:
         return True
 
     def convertTo1D(self, n :int):
-        return n * (self.row - 1) + self.col -1
+        return n * (self.row - 1) + self.col
 
     def getNeighbors(self, n:int) ->list: 
         neighbors = []
