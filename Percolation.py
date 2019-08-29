@@ -31,8 +31,6 @@ class Percolation:
         if row == self.n:
             self.algo.union(siteIndexIn1D, self.n*self.n + 1)
 
-
-
     def isOpenByIndexIn1D(self, indexIn1D :int):
         return self.grid[indexIn1D]
 

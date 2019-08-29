@@ -3,27 +3,13 @@ class Site:
         self.row = row
         self.col = col
 
-    def validate(self, n :int) ->bool:
-        if self.row < 1 or self.row > n:
-            return False
+    def getRow(self) ->int:
+        return self.row
 
-        if self.col < 1 or self.col > n:
-            return False
-
-        return True
+    def getCol(self) ->int:
+        return self.col
 
     def convertTo1D(self, n :int):
         return n * (self.row - 1) + self.col
 
-    def getNeighbors(self, n:int) ->list: 
-        neighbors = []
-        for step in [-1,1]:
-            neighbor = Site(self.row + step, self.col)
-            if neighbor.validate(n):
-                neighbors.append(neighbor)
-            
-            neighbor = Site(self.row, self.col + step)
-            if neighbor.validate(n):
-                neighbors.append(neighbor)
-        
-        return neighbors
+   
