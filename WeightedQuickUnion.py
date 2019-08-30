@@ -1,9 +1,9 @@
 class WeightedQuickUnion():
 
     def __init__(self, numberOfItems = 0):
-        self.setVariables(numberOfItems)
+        self.setUp(numberOfItems)
 
-    def setVariables(self, numberOfItems :int):
+    def setUp(self, numberOfItems :int):
         self.numberOfItems = numberOfItems
         self.connectivity = [i for i in range(0, numberOfItems)]
         self.treeSize = [1 for i  in range(0, numberOfItems)]
@@ -25,6 +25,7 @@ class WeightedQuickUnion():
         qRoot = self.root(q)
         if pRoot == qRoot:
             return
+        
         pRootSize = self.treeSize[p]
         qRootSize = self.treeSize[q]
         
