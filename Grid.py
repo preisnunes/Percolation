@@ -35,6 +35,6 @@ class Grid:
         
         return neighbors
 
-    def convertSiteTo1D(self, site :Site):
+    def convertToSite1DCoordinates(self, site :Site):
         return self.n * (site.getRow() - 1) + site.getCol()
 

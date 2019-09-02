@@ -20,7 +20,6 @@ class PercolationStats:
             while not grid.percolates():
                 row = random.randint(1, self.n)
                 col = random.randint(1, self.n)
-                print('row: ' + str(row) + ', col: ' + str(col))
                 grid.open(row,col)
             self.trialsFraction.append(grid.numberOfOpenSites()/(self.n*self.n))
 
@@ -41,7 +40,7 @@ class PercolationStats:
         return self.getAverage() - 1.96 * math.sqrt(self.getSquareStdDeviation()/len(self.trialsFraction))
 
 
-percolationStats = PercolationStats(4,2, WeightedQuickUnion())
+percolationStats = PercolationStats(50,10, WeightedQuickUnion())
 print(percolationStats.trialsFraction)
 print(percolationStats.getAverage())
                 
